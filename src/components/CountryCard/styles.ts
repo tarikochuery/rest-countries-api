@@ -10,7 +10,7 @@ const CardContainer = styled.div`
 
   background-color: ${props => props.theme.colors.elements};
 
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   margin-right: 1px;
 
   font-size: 14px;

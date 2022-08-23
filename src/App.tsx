@@ -1,6 +1,7 @@
 import { DefaultTheme, ThemeProvider } from "styled-components"
 import Header from "./components/Header/Header"
 import Home from "./pages/Home/Home"
+import CountriesProvider from "./services/context/CountriesContext/CountriesProvider"
 import usePersistedState from "./services/hooks/usePersistedState"
 import dark from "./style/themes/dark"
 import light from "./style/themes/light"
@@ -13,8 +14,10 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header changeTheme={changeTheme}/> 
-      <Home />
+      <CountriesProvider>
+        <Header changeTheme={changeTheme}/> 
+        <Home />
+      </CountriesProvider>
     </ThemeProvider>
   )
 }
