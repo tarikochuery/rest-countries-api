@@ -18,4 +18,9 @@ export const ImgContainer = styled.div`
   min-width: 300px;
   margin-right: 80px;
   margin-bottom: 20px;
+
+  @media(max-width: 920px) {
+    width: 100%;
+    margin-right: 0px
+  }
 `

@@ -8,7 +8,7 @@ export const Container = styled.div`
     margin-bottom: 25px;
   }
 
-  @media(max-width: 450px) {
+  @media(max-width: 920px) {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -27,7 +27,7 @@ export const DataContainer = styled.div`
   height: 130px;
   margin-bottom: 30px;
 
-  @media(max-width: 450px) {
+  @media(max-width: 920px) {
     height: fit-content;
     align-items: center;
   }
@@ -41,5 +41,7 @@ export const DataContainer = styled.div`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%
+    
   }
 `
