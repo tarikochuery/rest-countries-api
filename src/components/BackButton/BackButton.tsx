@@ -5,7 +5,7 @@ import { ButtonContainer } from "./style"
 
 export const BackButton = () => {
   return(
-    <Link to='/'>
+    <Link to='/' style={{width: '120px'}}>
       <ButtonContainer>
         <FontAwesomeIcon icon={faArrowLeft} />
         <p style={{marginLeft: '10px'}} >Back</p>

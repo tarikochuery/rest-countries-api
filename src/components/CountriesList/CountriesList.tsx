@@ -11,35 +11,49 @@ export type Region = 'Africa' | 'America' | 'Asia' | 'Oceania' | 'Europe' | unde
 const CountriesList = () => {
   const countries = useContext(CountriesContext)
   const [filteredCountries, setFilteredCountries] = useState<ICountry[]>(countries)
+  const [filters, setFilters] = useState<{filterText: string, filterRegion: Region}>({filterText: '', filterRegion: undefined})
 
   const filterCountriesByName = (filterText: string) => {
     if(!filterText) {
-      setFilteredCountries(countries)
+      setFilters({...filters, filterText: ''})
       return
     }
-    
-    const newCountries = countries.filter(country => {
-      return country.name.common.toLowerCase().includes(filterText)
-    })
-
-    setFilteredCountries(newCountries)
+    setFilters({...filters, filterText})
   }
 
-  const filterCountriesByRegion = (region: Region) => {
-    if(!region) {
+  const filterCountriesByRegion = (filterRegion: Region) => {
+    if(!filterRegion) {
+      setFilters({...filters, filterRegion: undefined})
+      return
+    }
+    setFilters({...filters, filterRegion})
+  }
+
+  const filterCountries = () => {
+    if (!filters.filterText && !filters.filterRegion) {
       setFilteredCountries(countries)
       return
     }
+
     const newFilteredCountries = countries.filter(country => {
-      return country.region === region
+      if (!filters.filterText) {
+        return country.region === filters.filterRegion
+      }
+
+      if (!filters.filterRegion) {
+        return country.name.common.toLowerCase().includes(filters.filterText.toLowerCase())
+      }
+
+      return country.name.common.toLocaleLowerCase().includes(filters.filterText.toLocaleLowerCase()) && country.region === filters.filterRegion
+
     })
 
     setFilteredCountries(newFilteredCountries)
   }
 
   useEffect(() => {
-    setFilteredCountries(countries)
-  }, [countries])
+    filterCountries()
+  }, [countries, filters])
 
   return (
     <>
