@@ -1,5 +1,7 @@
+import { BrowserRouter } from "react-router-dom"
 import { DefaultTheme, ThemeProvider } from "styled-components"
 import Header from "./components/Header/Header"
+import { RoutesComponent } from "./components/Routes/Routes"
 import Home from "./pages/Home/Home"
 import CountriesProvider from "./services/context/CountriesContext/CountriesProvider"
 import usePersistedState from "./services/hooks/usePersistedState"
@@ -13,12 +15,14 @@ function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <CountriesProvider>
-        <Header changeTheme={changeTheme}/> 
-        <Home />
-      </CountriesProvider>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CountriesProvider>
+          <Header changeTheme={changeTheme}/> 
+          <RoutesComponent />
+        </CountriesProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   )
 }
 

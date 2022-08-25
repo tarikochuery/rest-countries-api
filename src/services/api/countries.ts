@@ -10,7 +10,9 @@ export interface ICountry {
   flags: {
     png: string
   },
-  population: number
+  population: number,
+  cioc: string
+
 }
 
 const getCountries = async () => {
