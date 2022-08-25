@@ -3,6 +3,7 @@ import styled from "styled-components";
 const SearchBarStyle = styled.div`
   background-color: ${props => props.theme.colors.elements};
   width: 35%;
+  min-width: 100px;
   padding: 15px 30px;
 
   border-radius: 5px;

@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 const CardContainer = styled.div`
   width: 20%;
+  min-width: 300px;
   height: 340px;
 
   display: flex;
@@ -11,7 +12,7 @@ const CardContainer = styled.div`
   background-color: ${props => props.theme.colors.elements};
 
   margin-bottom: 60px;
-  margin-right: 1px;
+  margin-right: 10px;
 
   font-size: 14px;
   color: ${props => props.theme.colors.text};
