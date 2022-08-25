@@ -25,7 +25,7 @@ export const CountryData:React.FC<Props> = ({ country }) => {
     currencies: currenciesObject,
   } = country
 
-  const bordersNames = (borders.length !== 0 && countries.length !== 0) && borders.map(border => {
+  const bordersNames = (borders?.length !== 0 && countries.length !== 0) && borders?.map(border => {
     const borderData = countries.filter(country => country.cca3 === border)
     const borderName = borderData[0].name.common
     const borderCca3 = borderData[0].cca3
