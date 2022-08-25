@@ -3,7 +3,8 @@ const baseURL = 'https://restcountries.com/v3.1/all'
 export interface ICountry {
   name: {
     common: string,
-    official: string
+    official: string,
+    nativeName: Object
   },
   capital: string[],
   region: string,
@@ -11,8 +12,12 @@ export interface ICountry {
     png: string
   },
   population: number,
-  cioc: string
-
+  cca3: string,
+  borders: string[],
+  tld: string[],
+  subregion: string,
+  languages: Object,
+  currencies: Object
 }
 
 const getCountries = async () => {

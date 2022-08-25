@@ -12,7 +12,7 @@ const Header: React.FC<Props> = ({ changeTheme }) => {
 
   return(
     <HeaderContainer>
-      <p>Where in the world?</p>
+      <h2>Where in the world?</h2>
       <div 
       style={{
         width: '8%',

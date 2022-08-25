@@ -14,7 +14,7 @@ const SearchBar: React.FC<Props> = ({ filterCountries }) => {
 
   const handleInputChange = (e: React.ChangeEvent) => {
     const input = e.target as HTMLInputElement
-    const searchValue = input.value
+    const searchValue = input.value.toLowerCase()
     filterCountries(searchValue)
   }
 

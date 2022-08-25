@@ -19,7 +19,7 @@ const CountriesList = () => {
     }
     
     const newCountries = countries.filter(country => {
-      return country.name.common.includes(filterText)
+      return country.name.common.toLowerCase().includes(filterText)
     })
 
     setFilteredCountries(newCountries)

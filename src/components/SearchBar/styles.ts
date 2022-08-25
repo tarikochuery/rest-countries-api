@@ -15,6 +15,7 @@ const Input = styled.input`
   background-color: ${props => props.theme.colors.elements};
   color: ${props => props.theme.colors.input};
 
+  width: 100%;
   margin-left: 10px;
   border: none;
   outline: none;

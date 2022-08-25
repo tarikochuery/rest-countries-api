@@ -16,12 +16,12 @@ const CountryCard: React.FC<Props> = ({ country }) => {
           flags: {
                   png: flagImg
                  },
-          cioc
+          cca3
         } = country
   
   return (
       <CardContainer>
-        <Link to={`/${cioc}`} style={{color: 'inherit'}}>
+        <Link to={`/${cca3}`} style={{color: 'inherit'}}>
           <div>
           <img 
             src={flagImg} 

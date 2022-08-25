@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Country } from "../../pages/Home/Country/Country"
+import { Country } from "../../pages/Country/Country"
 import Home from "../../pages/Home/Home"
 
 export const RoutesComponent = () => (
