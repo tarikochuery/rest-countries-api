@@ -21,7 +21,7 @@ const CountryCard: React.FC<Props> = ({ country }) => {
   
   return (
       <CardContainer>
-        <Link to={`/${cioc}`}>
+        <Link to={`/${cioc}`} style={{color: 'inherit'}}>
           <div>
           <img 
             src={flagImg} 
@@ -43,7 +43,7 @@ const CountryCard: React.FC<Props> = ({ country }) => {
           }}
         >
           <h2 style={{marginBottom: '10px'}}>{commonName}</h2>
-          <p><strong>Population: </strong>{population}</p>
+          <p><strong>Population: </strong>{population.toLocaleString('en')}</p>
           <p><strong>Region: </strong>{region}</p>
           <p><strong>Capital: </strong>{capital}</p>
         </div>
