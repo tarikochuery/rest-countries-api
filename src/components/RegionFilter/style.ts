@@ -8,7 +8,7 @@ const Select = styled.select`
   border: none;
 
   width: 15%;
-  min-width: 150px;
+  min-width: 180px;
 
   cursor: pointer;
 `
