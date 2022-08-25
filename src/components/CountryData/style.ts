@@ -7,6 +7,15 @@ export const Container = styled.div`
   h2 {
     margin-bottom: 25px;
   }
+
+  @media(max-width: 450px) {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 `
 
 export const DataContainer = styled.div`
@@ -17,6 +26,11 @@ export const DataContainer = styled.div`
   align-items: stretch;
   height: 130px;
   margin-bottom: 30px;
+
+  @media(max-width: 450px) {
+    height: fit-content;
+    align-items: center;
+  }
 
   p {
     margin-bottom: 10px;

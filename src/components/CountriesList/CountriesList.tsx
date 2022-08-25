@@ -60,6 +60,7 @@ const CountriesList = () => {
       <div style={{
           marginBottom: '50px',
           display: 'flex',
+          flexWrap: 'wrap',
           justifyContent: 'space-between'
         }}>
         <SearchBar filterCountries={filterCountriesByName}/>

@@ -16,6 +16,7 @@ const Header: React.FC<Props> = ({ changeTheme }) => {
       <div 
       style={{
         width: '8%',
+        minWidth: '105px',
         display: 'flex',
         alignItems: 'center',
         justifyContent:'space-between',
@@ -23,7 +24,7 @@ const Header: React.FC<Props> = ({ changeTheme }) => {
         }}
       onClick={changeTheme}
       >
-        <FontAwesomeIcon color={text} icon={icon}/>
+        <FontAwesomeIcon color={text} icon={icon} style={{marginRight: '5px'}}/>
         <p style={{textTransform: 'capitalize'}}>{title === 'light' ? 'dark' : 'light'} mode</p>
       </div>
     </HeaderContainer>

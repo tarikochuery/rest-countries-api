@@ -10,6 +10,10 @@ const SearchBarStyle = styled.div`
 
   display: flex;
   align-items: center;
+
+  @media(max-width: 375px) {
+    margin-bottom: 20px;
+  }
 `
 
 const Input = styled.input`

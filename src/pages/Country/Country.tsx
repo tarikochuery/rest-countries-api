@@ -30,7 +30,8 @@ export const Country = () => {
         <BackButton/>
         <div style={{
                     display: 'flex',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    flexWrap: 'wrap'
                     }}>
           <ImgContainer>
             <img 

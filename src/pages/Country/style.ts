@@ -7,9 +7,15 @@ export const CountryContainer = styled.div`
   flex-direction: column;
 
   padding: 70px;
+
+  div {
+
+  }
 `
 
 export const ImgContainer = styled.div`
   width: 38%;
+  min-width: 300px;
   margin-right: 80px;
+  margin-bottom: 20px;
 `
